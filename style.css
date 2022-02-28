@@ -35,10 +35,10 @@ footer{
 .form-main{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: 90%;
     width: 60%;
     border: red 3px solid;

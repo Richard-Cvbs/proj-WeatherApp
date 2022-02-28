@@ -1,18 +1,17 @@
-const getCoordinates = function(){
+/* const getCoordinates = function(){
     let coordData = fetch('http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=baedd7b9aa8c3f169ae679110b759c58',{
         mode : 'cors' 
     })
     .then((data) => data.json())
     .then((jsonData) => jsonData)
     return coordData
-}
-const getWeather = function(place){
-    let weatherData = fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&APPID=baedd7b9aa8c3f169ae679110b759c58`,{
+} */
+const getWeather = async function(place){
+    let weatherData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&APPID=baedd7b9aa8c3f169ae679110b759c58`,{
         mode : 'cors' 
     })
-    .then((data)=>data.json())
-    .then((data)=>data)
-    return weatherData
+    let jsonData = await weatherData.json()
+    return jsonData
 }
 const placeListen = function(){
     const form = document.querySelector('.form-main')
