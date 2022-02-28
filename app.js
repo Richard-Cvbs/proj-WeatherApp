@@ -7,7 +7,7 @@
     return coordData
 } */
 const getWeather = async function(place){
-    let weatherData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&APPID=baedd7b9aa8c3f169ae679110b759c58`,{
+    let weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&APPID=baedd7b9aa8c3f169ae679110b759c58`,{
         mode : 'cors' 
     })
     let jsonData = await weatherData.json()
